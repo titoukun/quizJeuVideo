@@ -16,12 +16,16 @@ use App\Http\Controllers\QuestionController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'apropos'])->name('apropos');
 
+Route::get('questions/valider/{id}', [QuestionController::class, 'valider'])->name("questions.valider");
+Route::get('questions/supprimer/{id}', [QuestionController::class, 'supprimer'])->name("questions.supprimer");
 Route::get('questions/editer/{id}', [QuestionController::class, 'editer'])->name("questions.editer");
 Route::post('questions/editer/{id}', [QuestionController::class, 'ajouter']);
 Route::get('questions/contribuer', [QuestionController::class, 'contribuer']);
 Route::post('questions/contribuer', [QuestionController::class, 'ajouter'])->name("questions.contribuer");
 Route::get('questions/jouer', [QuestionController::class, 'jouer'])->name("questions.jouer");
+Route::get('questions/resultats', [QuestionController::class, 'resultats'])->name("questions.resultats");
 Route::get('questions/affichage', [QuestionController::class, 'recuperer_tout'])->name("questions.affichage");
 
 require __DIR__.'/auth.php';

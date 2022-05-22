@@ -18,7 +18,7 @@
       <th class="p-4">bonne_reponse</th>
       <th class="p-4">explication</th>
       <th class="p-4">validee</th>
-      <th class="p-4">actions</th>
+      <th colspan="3" class="p-4">actions</th>
     </tr>
   </thead>
   <tbody>
@@ -42,7 +42,10 @@
             <td class="p-3"><span class="p-1.5 uppercase font-medium rounded-lg tracking-wider bg-red-500">NON VALIDEE</span></td>
         @endif
         <td class="p-3"><a href="{{ route('questions.editer', ['id' => $question->id]) }}" class="p-1.5 uppercase font-medium rounded-lg tracking-wider bg-blue-500">Editer</a></td>
-    </tr>
+        <td class="p-3"><a href="{{ route('questions.supprimer', ['id' => $question->id]) }}" class="p-1.5 uppercase font-medium rounded-lg tracking-wider bg-red-500">Supprimer</a></td>
+        <td class="p-3"><a href="{{ route('questions.valider', ['id' => $question->id]) }}" class="p-1.5 uppercase font-medium rounded-lg tracking-wider bg-teal-600">Valider</a></td>
+        </td>
+      </tr>
     @endforeach
   </tbody>
 </table>

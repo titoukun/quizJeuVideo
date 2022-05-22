@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
         return view("home/home");
     }
+
+    public function apropos()
+    {
+        return view("home/apropos");
+    }
 }

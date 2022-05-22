@@ -1,4 +1,4 @@
-<footer class="bg-transparent bottom-0 border-t-2 border-white">
+<footer class="bg-[#101843] bottom-0 border-t-2 border-white">
     <div class="grid grid-cols-1 gap-8 py-8 px-6 md:grid-cols-2">
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
